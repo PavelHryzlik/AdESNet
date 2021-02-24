@@ -12,13 +12,13 @@
     <Copyright>Copyright © 2021</Copyright>
 
     <PackageIcon>icon.png</PackageIcon>
-    <PackageIconUrl>file://C:\Users\Pavel\source\repos\AdESNet\src\AdESNet\images\icon.png</PackageIconUrl>
+    <PackageIconUrl>https://github.com/PavelHryzlik/AdESNet/blob/master/src/AdESNet/images/icon.png?raw=true</PackageIconUrl>
 
     <PackageReleaseNotes>PreAlfa</PackageReleaseNotes>
     <Version>1.0.0-alpha</Version>
 
-    <!--<IncludeSymbols>true</IncludeSymbols>
-    <SymbolPackageFormat>snupkg</SymbolPackageFormat>-->   
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>   
 
   </PropertyGroup>
   
