@@ -12,6 +12,9 @@
 ###############################################################################
 #*.cs     diff=csharp
 
+# Example of a `.gitattributes` file which reclassifies `.rb` files as Java:
+*.cpp linguist-language=C#
+
 ###############################################################################
 # Set the merge driver for project and solution files
 #
