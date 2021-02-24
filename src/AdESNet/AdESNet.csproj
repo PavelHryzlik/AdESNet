@@ -1,0 +1,155 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>net5.0;net48</TargetFrameworks>
+    <Platforms>AnyCPU;x64;x86</Platforms>
+
+    <Authors>Pavel Hryzlík</Authors>
+    <Company>Pavel Hryzlík</Company>
+
+    <Description>Cryptographic library implementing eIDAS. Providing digital signatures and verification. Supports CAdES, PAdES, XAdES.</Description>
+    <PackageTags>AdESNet eIDAS AdES CAdES PAdES XAdES</PackageTags>
+    <Copyright>Copyright © 2021</Copyright>
+
+    <PackageIcon>icon.png</PackageIcon>
+    <PackageIconUrl>file://C:\Users\Pavel\source\repos\AdESNet\src\AdESNet\images\icon.png</PackageIconUrl>
+
+    <PackageReleaseNotes>PreAlfa</PackageReleaseNotes>
+    <Version>1.0.0-alpha</Version>
+
+    <!--<IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>-->   
+
+  </PropertyGroup>
+  
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <OutputPath>..\..\bin\$(Platform)\AdESNet\$(Configuration)\</OutputPath>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x86'">
+    <OutputPath>..\..\bin\$(Platform)\AdESNet\$(Configuration)\</OutputPath>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutputPath>..\..\bin\$(Platform)\AdESNet\$(Configuration)\</OutputPath>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <OutputPath>..\..\bin\$(Platform)\AdESNet\$(Configuration)\</OutputPath>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x86'">
+    <OutputPath>..\..\bin\$(Platform)\AdESNet\$(Configuration)\</OutputPath>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutputPath>..\..\bin\$(Platform)\AdESNet\$(Configuration)\</OutputPath>
+  </PropertyGroup>
+
+  <ItemGroup Condition="'$(TargetFramework)' == 'net48' AND '$(Platform)' == 'AnyCPU' AND '$(Prefer32Bit)' == 'true' ">
+    <Content Include="lib\x86\AdESNet.CLRFramework.dll" Link="x86\AdESNet.CLRFramework.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(TargetFramework)' == 'net48' AND '$(Platform)' == 'AnyCPU' AND '$(Prefer32Bit)' == 'false' ">
+    <Content Include="lib\x64\AdESNet.CLRFramework.dll" Link="x64\AdESNet.CLRFramework.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(TargetFramework)' == 'net48' AND '$(Platform)' == 'x86' ">
+    <Content Include="lib\x86\AdESNet.CLRFramework.dll" Link="x86\AdESNet.CLRFramework.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(TargetFramework)' == 'net48' AND '$(Platform)' == 'x64' ">
+    <Content Include="lib\x64\AdESNet.CLRFramework.dll" Link="x64\AdESNet.CLRFramework.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(TargetFramework)' == 'net5.0' AND '$(Platform)' == 'AnyCPU' AND '$(Prefer32Bit)' == 'true' ">
+    <Content Include="lib\x86\AdESNet.CLR.dll" Link="x86\AdESNet.CLR.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="lib\x64\Ijwhost.dll" Link="x64\Ijwhost.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(TargetFramework)' == 'net5.0' AND '$(Platform)' == 'AnyCPU' AND '$(Prefer32Bit)' == 'false' ">
+    <Content Include="lib\x64\AdESNet.CLR.dll" Link="x64\AdESNet.CLR.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="lib\x64\Ijwhost.dll" Link="x64\Ijwhost.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(TargetFramework)' == 'net5.0' AND '$(Platform)' == 'x86' ">
+    <Content Include="lib\x86\AdESNet.CLR.dll" Link="x86\AdESNet.CLR.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="lib\x86\Ijwhost.dll" Link="x86\Ijwhost.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(TargetFramework)' == 'net5.0' AND '$(Platform)' == 'x64' ">
+    <Content Include="lib\x64\AdESNet.CLR.dll" Link="x64\AdESNet.CLR.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="lib\x64\Ijwhost.dll" Link="x64\Ijwhost.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="build\AdESNet.props">
+      <PackagePath>buildTransitive\net5.0\AdESNet.props</PackagePath>
+      <Pack>true</Pack>
+    </Content>
+    <Content Include="build\AdESNet.props">
+      <PackagePath>buildTransitive\net48\AdESNet.props</PackagePath>
+      <Pack>true</Pack>
+    </Content>
+    <Content Include="lib\x64\AdESNet.CLR.dll">
+      <PackagePath>lib\net5.0\x64\AdESNet.CLR.dll</PackagePath>
+      <Pack>true</Pack>
+    </Content>
+    <Content Include="lib\x64\Ijwhost.dll">
+      <PackagePath>lib\net5.0\x64\Ijwhost.dll</PackagePath>
+      <Pack>true</Pack>
+    </Content>
+    <Content Include="lib\x64\AdESNet.CLRFramework.dll">
+      <PackagePath>lib\net48\x64\AdESNet.CLRFramework.dll</PackagePath>
+      <Pack>true</Pack>
+    </Content>
+    <Content Include="lib\x86\AdESNet.CLR.dll">   
+      <PackagePath>lib\net5.0\x86\AdESNet.CLR.dll</PackagePath>
+      <Pack>true</Pack>
+    </Content>
+    <Content Include="lib\x86\Ijwhost.dll">
+      <PackagePath>lib\net5.0\x86\Ijwhost.dll</PackagePath>
+      <Pack>true</Pack>
+    </Content>
+    <Content Include="lib\x86\AdESNet.CLRFramework.dll">
+      <PackagePath>lib\net48\x86\AdESNet.CLRFramework.dll</PackagePath>
+      <Pack>true</Pack>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="10.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="images\icon.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
+
+</Project>
