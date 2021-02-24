@@ -15,6 +15,47 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdESNet.NetFrameworkTest", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AdESNet", "src\AdESNet\AdESNet.csproj", "{ACABE594-105B-4347-9238-B9913CCCB754}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "lib", "lib", "{30CB7C3F-7E57-4240-A768-C4F61C1D8134}"
+	ProjectSection(SolutionItems) = preProject
+		lib\AdESNet.Common.h = lib\AdESNet.Common.h
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "x86", "x86", "{609D8CA8-95B8-4E07-9D61-F174F93ADD51}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "x64", "x64", "{742C15E6-9346-4C89-9C36-4665CA0EAF93}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "debug", "debug", "{7F75E996-C6B4-4639-A9AB-2453556DBD51}"
+	ProjectSection(SolutionItems) = preProject
+		lib\x64\debug\AdES.hpp = lib\x64\debug\AdES.hpp
+		lib\x64\debug\AdES.lib = lib\x64\debug\AdES.lib
+		lib\x64\debug\zlibd.lib = lib\x64\debug\zlibd.lib
+		lib\x64\debug\zlibstaticd.lib = lib\x64\debug\zlibstaticd.lib
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "release", "release", "{0C2CF8E6-8D70-4B2C-B5E1-B0CC5127F811}"
+	ProjectSection(SolutionItems) = preProject
+		lib\x64\release\AdES.hpp = lib\x64\release\AdES.hpp
+		lib\x64\release\AdES.lib = lib\x64\release\AdES.lib
+		lib\x64\release\zlib.lib = lib\x64\release\zlib.lib
+		lib\x64\release\zlibstatic.lib = lib\x64\release\zlibstatic.lib
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "debug", "debug", "{790805D8-9EAC-4D94-BD09-869D2621965F}"
+	ProjectSection(SolutionItems) = preProject
+		lib\x86\debug\AdES.hpp = lib\x86\debug\AdES.hpp
+		lib\x86\debug\AdES.lib = lib\x86\debug\AdES.lib
+		lib\x86\debug\zlibd.lib = lib\x86\debug\zlibd.lib
+		lib\x86\debug\zlibstaticd.lib = lib\x86\debug\zlibstaticd.lib
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "release", "release", "{0DCC45F0-0BE6-4FF9-B952-8FDC9D38ED86}"
+	ProjectSection(SolutionItems) = preProject
+		lib\x86\release\AdES.hpp = lib\x86\release\AdES.hpp
+		lib\x86\release\AdES.lib = lib\x86\release\AdES.lib
+		lib\x86\release\zlib.lib = lib\x86\release\zlib.lib
+		lib\x86\release\zlibstatic.lib = lib\x86\release\zlibstatic.lib
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -98,6 +139,14 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{609D8CA8-95B8-4E07-9D61-F174F93ADD51} = {30CB7C3F-7E57-4240-A768-C4F61C1D8134}
+		{742C15E6-9346-4C89-9C36-4665CA0EAF93} = {30CB7C3F-7E57-4240-A768-C4F61C1D8134}
+		{7F75E996-C6B4-4639-A9AB-2453556DBD51} = {742C15E6-9346-4C89-9C36-4665CA0EAF93}
+		{0C2CF8E6-8D70-4B2C-B5E1-B0CC5127F811} = {742C15E6-9346-4C89-9C36-4665CA0EAF93}
+		{790805D8-9EAC-4D94-BD09-869D2621965F} = {609D8CA8-95B8-4E07-9D61-F174F93ADD51}
+		{0DCC45F0-0BE6-4FF9-B952-8FDC9D38ED86} = {609D8CA8-95B8-4E07-9D61-F174F93ADD51}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {396970AF-2F2D-4891-BF06-3695BCB11154}
